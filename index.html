@@ -6,22 +6,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Creating the template</title>
-  <script src="js/main.js"></script>
-  <script src="js/handlebars-v4.0.11.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="js/handlebars-v4.0.11.js"></script>
+  <script src="js/main.js"></script>
 </head>
 
 <body>
   <h1>Game of Thrones</h1>
-  <ul class="character-list-container">
+  <ul class="character-list-container"></ul>
+
+  <script id="character-template" type="text/x-handlebars-template">
+    {{#each characters}}
     <li class="character">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfNrdvvz9ZRt8VlNO6YfPsU6ZCi_Lg0pSD5lLtYgV9Lex8t7AoNg" alt="jon snow">
-      <h2>Jon Snow</h2>
-      <p>Actor: Kit Harington</p>
-      <p>House: Stark</p>
-      <p>Whereabouts: The Wall</p>
+      <img src="images/{{shortCode}}.jpg" alt="{{shortCode}}">
+      <h2>Name: {{name}}</h2>
+      <p>Actor: {{actor}}</p>
+      <p>House: {{house}}</p>
+      <p>Whereabouts: {{location}}</p>
     </li>
-  </ul>
+    {{/each}}
+  </script>
 </body>
 
 </html>
