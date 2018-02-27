@@ -21,10 +21,11 @@
     <li class="character">
       <img src="images/{{shortCode}}.jpg" alt="{{shortCode}}">
       <div class="character-details">
-        <h2>Name: {{name}}</h2>
+        <h2>{{name}}</h2>
         <p>Actor: {{actor}}</p>
         <p>House: {{house}}</p>
-        <p>Whereabouts: {{#if location}}{{location}}{{else}}Unknown{{/if}}</p>
+        {{#if location}}<p>Whereabouts: {{location}}</p>{{/if}}
+        {{#unless location}}<p>Whereabouts are unknown...</p>{{/unless}}
       </div>
     </li>
     {{/each}}
