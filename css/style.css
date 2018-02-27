@@ -1,0 +1,35 @@
+body {
+  background-color: #EDEDED;
+}
+
+.title {
+  text-align: center;
+}
+
+.character-list-container li {
+  list-style: none;
+}
+
+.character {
+  background-color: #FFF;
+  margin: 20px 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  box-shadow: 2px 2px 5px;
+  height: 120px;
+}
+
+.character img {
+  height: 120px;
+}
+
+.character-details {
+  padding-left: 20px;
+}
+
+.character-details h2,
+.character-details p {
+  margin: 0;
+  padding: 0;
+}

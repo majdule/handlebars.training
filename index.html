@@ -9,20 +9,23 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="js/handlebars-v4.0.11.js"></script>
   <script src="js/main.js"></script>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-  <h1>Game of Thrones</h1>
+  <h1 class="title">Game of Thrones</h1>
   <ul class="character-list-container"></ul>
 
   <script id="character-template" type="text/x-handlebars-template">
     {{#each characters}}
     <li class="character">
       <img src="images/{{shortCode}}.jpg" alt="{{shortCode}}">
-      <h2>Name: {{name}}</h2>
-      <p>Actor: {{actor}}</p>
-      <p>House: {{house}}</p>
-      <p>Whereabouts: {{location}}</p>
+      <div class="character-details">
+        <h2>Name: {{name}}</h2>
+        <p>Actor: {{actor}}</p>
+        <p>House: {{house}}</p>
+        <p>Whereabouts: {{#if location}}{{location}}{{else}}Unknown{{/if}}</p>
+      </div>
     </li>
     {{/each}}
   </script>

@@ -26,15 +26,22 @@ var cast = {
       "shortCode": "ned-stark",
       "actor": "Sean Bean",
       "house": "Stark",
-      "location": "unknown"
+      "location": ""
     },
     {
       "name": "Sandor Clegane",
       "shortCode": "the-hound",
       "actor": "Rory McCann",
       "house": "Clegane",
-      "location": "unknown"
+      "location": ""
     },
+    {
+      "name": "Daenerys Targaryen",
+      "shortCode": "dany",
+      "actor": "Emilia Clarke",
+      "house": "Targaryen",
+      "location": "Mereen"
+    }
   ]
 }
 
