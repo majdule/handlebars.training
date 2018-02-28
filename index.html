@@ -26,12 +26,12 @@
         <p>{{formatPhoneNumber house.phone}}</p>
         <p>Actor: {{actor}}</p>
         {{#with house}}
-        {{#if name}}<p>House: {{name}}</p>{{/if}}
+        {{#if name}}<p>House: {{#makeBold}}{{name}}{{/makeBold}}</p>{{/if}}
         {{#if seat}}<p>Seat: {{seat}}</p>{{/if}}
         {{#if words}}<p>Words: {{words}}</p>{{/if}}
         {{../name}}
         {{/with}}
-        {{#if location}}<p>Whereabouts: {{location}}</p>{{/if}}
+        {{#if location}}<p>Whereabouts: {{#toLower}}{{location}}{{/toLower}}</p>{{/if}}
         {{#unless location}}<p>Whereabouts are unknown...</p>{{/unless}}
       </div>
     </li>

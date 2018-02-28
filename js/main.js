@@ -9,6 +9,14 @@ Handlebars.registerHelper("formatPhoneNumber", function(property) {
   }
 });
 
+Handlebars.registerHelper("makeBold", function(options){
+  return new Handlebars.SafeString("<strong>" + options.fn(this) + "</strong>");
+});
+
+Handlebars.registerHelper("toLower", function(options) {
+  return options.fn(this).toLowerCase();
+});
+
 $(document).ready(function () {
   var characterTemplate = $("#character-template").html();
 
