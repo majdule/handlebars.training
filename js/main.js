@@ -30,9 +30,15 @@ $(document).ready(function () {
   var characterTemplate = $("#character-template").html();
 
   var compiledCharacterTemplate = Handlebars.compile(characterTemplate);
+  var $characterList = $(".character-list-container");
 
   var characterId = getParameterByName("id");
   console.log("Character id: ", characterId);
+
+  $.ajax("./character-details-partial.html").done(function (charDetailsPartial) {
+    $("body").append(charDetailsPartial);
+    Handlebars.registerPartial("characterDetailsPartial", $("#character-details-partial").html());
+  });
 
   $.ajax("./data/cast.json").done(function (cast) {
     if ($("body").hasClass("page-cast-details")) {

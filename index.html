@@ -6,36 +6,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Creating the template</title>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="js/handlebars-v4.0.11.js"></script>
-  <script src="js/main.js"></script>
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
   <h1 class="title">Game of Thrones</h1>
   <ul class="character-list-container"></ul>
-
+  <!-- partial template here -->
   <script id="character-template" type="text/x-handlebars-template">
     {{#each characters}}
     <li class="character">
       <img src="images/{{shortCode}}.jpg" alt="{{shortCode}}">
-      <div class="character-details">
-        <h2>{{name}}</h2>
-        {{formatName name house/seat}}
-        <p>{{formatPhoneNumber house.phone}}</p>
-        <p>Actor: {{actor}}</p>
-        {{#with house}} {{#if name}}
-        <p>House: {{#makeBold}}{{name}}{{/makeBold}}</p>{{/if}} {{#if seat}}
-        <p>Seat: {{seat}}</p>{{/if}} {{#if words}}
-        <p>Words: {{words}}</p>{{/if}} {{../name}} {{/with}} {{#if location}}
-        <p>Whereabouts: {{#toLower}}{{location}}{{/toLower}}</p>{{/if}} {{#unless location}}
-        <p>Whereabouts are unknown...</p>{{/unless}}
-      </div>
+      {{> characterDetailsPartial}}      
       <a href="cast-details.html?id={{@index}}" class="button view-details">View details &#8674</a>
     </li>
     {{/each}}
   </script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="js/handlebars-v4.0.11.js"></script>
+  <script src="js/main.js"></script>
 </body>
 
 </html>
