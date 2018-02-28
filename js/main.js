@@ -33,7 +33,6 @@ $(document).ready(function () {
   var $characterList = $(".character-list-container");
 
   var characterId = getParameterByName("id");
-  console.log("Character id: ", characterId);
 
   $.ajax("./character-details-partial.html").done(function (charDetailsPartial) {
     $("body").append(charDetailsPartial);
