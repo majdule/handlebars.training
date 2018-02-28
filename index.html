@@ -22,8 +22,15 @@
       <img src="images/{{shortCode}}.jpg" alt="{{shortCode}}">
       <div class="character-details">
         <h2>{{name}}</h2>
+        {{formatName name house/seat}}
+        <p>{{formatPhoneNumber house.phone}}</p>
         <p>Actor: {{actor}}</p>
-        <p>House: {{house}}</p>
+        {{#with house}}
+        {{#if name}}<p>House: {{name}}</p>{{/if}}
+        {{#if seat}}<p>Seat: {{seat}}</p>{{/if}}
+        {{#if words}}<p>Words: {{words}}</p>{{/if}}
+        {{../name}}
+        {{/with}}
         {{#if location}}<p>Whereabouts: {{location}}</p>{{/if}}
         {{#unless location}}<p>Whereabouts are unknown...</p>{{/unless}}
       </div>

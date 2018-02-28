@@ -4,43 +4,80 @@
       "name": "Jon Snow",
       "shortCode": "jon-snow",
       "actor": "Kit Harrington",
-      "house": "Stark",
+      "house": {
+        "name": "Stark",
+        "seat": "Winterfell",
+        "words": "Winter is coming",
+        "phone": "13464111"
+      },
       "location": "The Wall"
     },
     {
       "name": "Tyrion Lannister",
       "shortCode": "tyrion",
       "actor": "Peter Dinklage",
-      "house": "Lannister",
+      "house": {
+        "name": "Lannister",
+        "seat": "Casterly Rock",
+        "words": "Hear me roar",
+        "phone": "934461696"
+      },
       "location": "Dragonstone"
     },
     {
       "name": "Brienne of Tarth",
       "shortCode": "brienne",
       "actor": "Gwendoline Christie",
-      "house": "Stark",
-      "location": "Winterfell"
+      "house": {
+        "name": "Tarth",
+        "seat": "Evenfall Hall",
+        "words": "In darkness we rise",
+        "phone": "42456648"
+      }
     },
     {
       "name": "Eddard Stark",
       "shortCode": "ned-stark",
       "actor": "Sean Bean",
-      "house": "Stark",
-      "location": ""
+      "house": {
+        "name": "Stark",
+        "seat": "Winterfell",
+        "words": "Winter is coming",
+        "phone": "346461632"
+      }
     },
     {
       "name": "Sandor Clegane",
       "shortCode": "the-hound",
       "actor": "Rory McCann",
-      "house": "Clegane",
-      "location": ""
+      "house": {
+        "name": "Clegane",
+        "seat": "Clegane's Keep"
+      }
     },
     {
       "name": "Daenerys Targaryen",
       "shortCode": "dany",
       "actor": "Emilia Clarke",
-      "house": "Targaryen",
+      "house": {
+        "name": "Targaryen",
+        "seat": "Dragonstone",
+        "words": "Fire and blood",
+        "phone": "7124663"
+      },
       "location": "Mereen"
+    },
+    {
+      "name": "King Joffrey Baratheon",
+      "shortCode": "joffrey",
+      "actor": "Jack Gleeson",
+      "house": {
+        "name": "Baratheon",
+        "seat": "The Red Keep",
+        "words": "Ours is the fury",
+        "phone": "81432515"
+      },
+      "location": "Kings Landing"
     }
   ]
 }
