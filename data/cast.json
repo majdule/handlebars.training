@@ -10,7 +10,8 @@
         "words": "Winter is coming",
         "phone": "13464111"
       },
-      "location": "The Wall"
+      "location": "The Wall",
+      "bio": "Jon is introduced in 1996's A game of thrones as the illegitimate son of Ned Stark"
     },
     {
       "name": "Tyrion Lannister",
@@ -20,9 +21,10 @@
         "name": "Lannister",
         "seat": "Casterly Rock",
         "words": "Hear me roar",
-        "phone": "934461696"
+        "phone": "934461696" 
       },
-      "location": "Dragonstone"
+      "location": "Dragonstone",
+      "bio": "Vivamus eros diam, condimentum at pellentesque ac, accumsan in nibh. Proin quis neque elit."
     },
     {
       "name": "Brienne of Tarth",
@@ -33,7 +35,8 @@
         "seat": "Evenfall Hall",
         "words": "In darkness we rise",
         "phone": "42456648"
-      }
+      },
+      "bio": "Aliquam interdum vel massa at mollis. Integer sed nunc interdum, elementum tellus non, accumsan elit."
     },
     {
       "name": "Eddard Stark",
@@ -44,7 +47,8 @@
         "seat": "Winterfell",
         "words": "Winter is coming",
         "phone": "346461632"
-      }
+      },
+      "bio": "Aliquam faucibus est et sapien gravida, et eleifend justo venenatis."
     },
     {
       "name": "Sandor Clegane",
@@ -53,7 +57,8 @@
       "house": {
         "name": "Clegane",
         "seat": "Clegane's Keep"
-      }
+      },
+      "bio": "Quisque non euismod orci. Nunc quis tempus nulla, convallis aliquet mi."
     },
     {
       "name": "Daenerys Targaryen",
@@ -65,7 +70,8 @@
         "words": "Fire and blood",
         "phone": "7124663"
       },
-      "location": "Mereen"
+      "location": "Mereen",
+      "bio": "Nullam tincidunt enim semper justo fringilla, vel egestas enim porttitor. Aenean ornare justo nec vestibulum lacinia."
     },
     {
       "name": "King Joffrey Baratheon",
@@ -77,7 +83,8 @@
         "words": "Ours is the fury",
         "phone": "81432515"
       },
-      "location": "Kings Landing"
+      "location": "Kings Landing",
+      "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec id sem sit amet augue lacinia dictum vitae sit amet ante. Vestibulum interdum metus eget massa gravida dictum."
     }
   ]
 }

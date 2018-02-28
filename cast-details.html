@@ -12,13 +12,12 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
-  <h1 class="title">Game of Thrones</h1>
-  <ul class="character-list-container"></ul>
+<body class="page-cast-details">
+  <h1 class="title">Game of Thrones | Cast details</h1>
+  <section class="character-list-container"></section>
 
   <script id="character-template" type="text/x-handlebars-template">
-    {{#each characters}}
-    <li class="character">
+    <div class="character">
       <img src="images/{{shortCode}}.jpg" alt="{{shortCode}}">
       <div class="character-details">
         <h2>{{name}}</h2>
@@ -32,9 +31,11 @@
         <p>Whereabouts: {{#toLower}}{{location}}{{/toLower}}</p>{{/if}} {{#unless location}}
         <p>Whereabouts are unknown...</p>{{/unless}}
       </div>
-      <a href="cast-details.html?id={{@index}}" class="button view-details">View details &#8674</a>
-    </li>
-    {{/each}}
+      <a href="index.html" class="button view-details">Back</a>
+    </div>
+    <div class="character-bio-container">
+      <p><strong>Bio: </strong>{{bio}}</p>
+    </div>
   </script>
 </body>
 
