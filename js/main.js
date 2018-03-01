@@ -1,3 +1,15 @@
+// Initialize Firebase
+var config = {
+  apiKey: "AIzaSyBeuGEfClxQt_k1UzAr29C3-l7W1O5l4bg",
+  authDomain: "handlebars-course-60263.firebaseapp.com",
+  databaseURL: "https://handlebars-course-60263.firebaseio.com",
+  projectId: "handlebars-course-60263",
+  storageBucket: "",
+  messagingSenderId: "140867224545"
+};
+
+firebase.initializeApp(config);
+
 function getParameterByName(name, url) {
   if (!url) url = window.location.href;
   name = name.replace(/[\[\]]/g, "\\$&");
@@ -39,11 +51,21 @@ $(document).ready(function () {
     Handlebars.registerPartial("characterDetailsPartial", $("#character-details-partial").html());
   });
 
-  $.ajax("./data/cast.json").done(function (cast) {
+  /* $.ajax("./data/cast.json").done(function (cast) {
     if ($("body").hasClass("page-cast-details")) {
       $(".character-list-container").html(compiledCharacterTemplate(cast.characters[characterId]));
     } else {
       $(".character-list-container").html(compiledCharacterTemplate(cast));
+    }
+  }); */
+
+  var dbRef = firebase.database().ref();
+  dbRef.on('value', function (snap) {
+    if ($("body").hasClass("page-cast-details")) {
+      $characterList.html(compiledCharacterTemplate(snap.val().characters[characterId]));
+    } else {
+      $characterList.html(compiledCharacterTemplate(snap.val()));
+
     }
   });
 

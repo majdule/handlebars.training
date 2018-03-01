@@ -16,8 +16,7 @@
   <script id="character-template" type="text/x-handlebars-template">
     {{#each characters}}
     <li class="character">
-      <img src="images/{{shortCode}}.jpg" alt="{{shortCode}}">
-      {{> characterDetailsPartial}}      
+      <img src="images/{{shortCode}}.jpg" alt="{{shortCode}}"> {{> characterDetailsPartial}}
       <a href="cast-details.html?id={{@index}}" class="button view-details">View details &#8674</a>
     </li>
     {{/each}}
@@ -25,6 +24,7 @@
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="js/handlebars-v4.0.11.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>
   <script src="js/main.js"></script>
 </body>
 
